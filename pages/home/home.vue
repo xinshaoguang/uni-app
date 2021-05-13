@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<view class="content" hover-class="hover-content" hover-start-time="200" hover-stay-time="200">
-			nihao
+			home
 		</view>
 	</view>
 </template>

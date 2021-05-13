@@ -4,6 +4,9 @@
 		<view class="text-area">
 			<text class="title">{{title}}</text>
 		</view>
+		<view>
+			<navigator url="/pages/video/video" >跳转到video</navigate>
+		</view>
 	</view>
 </template>
 
