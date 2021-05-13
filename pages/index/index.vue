@@ -14,8 +14,14 @@
 				title: 'Hello'
 			}
 		},
-		onLoad() {
-
+		onLoad(){
+			console.log("load")
+		},
+		onShow(){
+			console.log("show")
+		},
+		onHide(){
+			console.log("hide") 
 		},
 		methods: {
 
