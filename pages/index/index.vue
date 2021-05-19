@@ -5,8 +5,10 @@
 			<text class="title">{{title}}</text>
 		</view>
 		<view>
-			<navigator url="/pages/video/video" >跳转到video</navigate>
+			<navigator url="/pages/video/video">跳转到video</navigator>
 		</view>
+		<button @click="getImg">获取图片</button>
+		<button @click="copy">copy</button>
 	</view>
 </template>
 
@@ -17,17 +19,40 @@
 				title: 'Hello'
 			}
 		},
-		onLoad(){
+		onLoad() {
 			console.log("load")
+			uni.getSystemInfo({
+			    success: function (res) {
+			        console.log(res.model);
+			        console.log(res.pixelRatio);
+			        console.log(res.windowWidth);
+			        console.log(res.windowHeight);
+			        console.log(res.language);
+			        console.log(res.version);
+			        console.log(res.platform);
+			    }
+			});
 		},
-		onShow(){
+		onShow() {
 			console.log("show")
 		},
-		onHide(){
-			console.log("hide") 
+		onHide() {
+			console.log("hide")
 		},
 		methods: {
+			getImg() {
+				uni.chooseImage({
 
+				})
+			},
+			copy(){
+				uni.setClipboardData({
+				    data: 'hello',
+				    success: function () {
+				        console.log('success');
+				    }
+				});
+			}
 		}
 	}
 </script>
